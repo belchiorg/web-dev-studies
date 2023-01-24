@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    height: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-style: dotted none none;
+    border-width: 5px 0 0;
+    border-color: rgb(202, 202, 202);
+}
+
+img {
+    width: 70%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+h1 , h3 {
+    color: #66BFBF;
+}
