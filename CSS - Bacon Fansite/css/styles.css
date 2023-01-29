@@ -1,0 +1,20 @@
+h1 {
+    color: red;
+    font-size: 200px;
+}
+
+
+img:hover {
+    background-color: red;
+}
+
+
+.green {
+    background-color: green;
+    
+}
+
+.red {
+    background-color: red;
+    size: auto;
+}
