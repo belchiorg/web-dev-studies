@@ -9,6 +9,7 @@ let gameLost = true;
 
 let showing = false;
 
+//BLinks the whole sequence
 function showSequence(number) {
     showing = true;
     if (number == sequence.length){
@@ -21,6 +22,7 @@ function showSequence(number) {
     }, 250);
 }
 
+//Generates a new color for the sequence
 function addNewSelection() {
     switch (Math.floor(Math.random()*3.8)) {
         case 0:
@@ -38,11 +40,13 @@ function addNewSelection() {
     }
 } 
 
+//Plays the correct sound
 function makeSound(option) {
     let sound = new Audio("sounds/" + option + ".mp3");
     sound.play();
 }
 
+//Blinks a colored button
 function blink(option) {
     $("#" + option).addClass("pressed");
     makeSound(option);
@@ -51,6 +55,7 @@ function blink(option) {
     }, 200); 
 }
 
+//Signing button press to start game
 $("body").keydown(() => {
     if (lvl != 0 && !gameLost) return;
     gameLost = false;
@@ -61,7 +66,7 @@ $("body").keydown(() => {
     $("h1").text("Level " + lvl);
 })
 
-
+//Handling click on button
 $(".btn").click((event) => {
     if (lvl == 0 || gameLost || showing) {
         return;
