@@ -17,6 +17,10 @@ app.get("/bmicalculator", (req, res) => {
     res.sendFile(__dirname + "/bmicalculator.html");
 })
 
+app.get("/joke", (req,res) => {
+    res.send("<h1>")
+})
+
 app.post("/bmicalculator", (req, res) => {
     let result = req.body.weight / (req.body.height ** 2);
     
