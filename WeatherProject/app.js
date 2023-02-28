@@ -23,6 +23,7 @@ app.post("/", (req, res) => {
 
         apiRes.on("data", (data) => {
             const weatherData = JSON.parse(data);
+            console.log(weatherData);
             const temp = weatherData.main.temp;
             const weatherDesc = weatherData.weather[0].description;
             const icon = weatherData.weather[0].icon;
