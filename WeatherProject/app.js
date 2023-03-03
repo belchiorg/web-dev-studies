@@ -4,20 +4,20 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req,res) => {
+app.get("/", (req, res) => {
 
     res.sendFile(__dirname + "/index.html");
-    
+
 })
 
 app.post("/", (req, res) => {
     const query = req.body.cityName;
-    const appKey = "a954fecfe2c82b082a0d0ccae7b11d87";
+    const appKey = "Key GOES HERE HASDHFASHDFASHF";
     const units = "metric";
 
-    const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&appid="+ appKey +"&units=" + units;
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + appKey + "&units=" + units;
     https.get(url, (apiRes) => {
         console.log(res.statusCode);
 
